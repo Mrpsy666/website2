@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(0,0,0,0.65);
+    
+}
+.nav ul,.header div.row2 ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav li,.header div.row2 li {
+    font-size: 10px;
+    color: #D5D5D5;
+    margin: 0 10px;
+}
+
+.nav a,.header div.row2 a {
+    text-decoration: none;
+    color:#D5D5D5;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.nav a:hover
+{
+    cursor: pointer;
+    color: #fff;
+}
+.header
+{
+    background-color:rgb(0, 0, 0,0.018);
+}
+.header div.row1 div.img:hover
+{
+    cursor: pointer;
+}
+.header div.row1,header div.row2
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.header div.row1 div.search-container{
+    display: flex;
+    width: 100%;
+}
+  
+.header div.search-container input{
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.header div.search-container button {
+    width: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(0,0,0,0.3);
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.header div.row2 ul
+{
+    padding-left: 15px;
+    justify-content: start;
+}
+.header div.row2 a
+{
+    color: rgb(101, 172, 214);
+    font-size: 15px;
+}
+.header div.row2 ul li:hover
+{
+    background-color: rgb(51, 116, 221,0.8);
+}
+.header div.row2 a:hover
+{
+    color: #fff;
+}
+.all
+{
+    display: flex;
+
+}
+.col1
+{
+    
+    background-color: lightblue;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.col1 img,.col1 textarea
+{
+    width: 67%;
+    display: block;
+}
+.col2
+{
+    margin:0px 20px;
+}
+.col2 div.one
+{
+    background-color: #eaf1de;
+    width: 300px;
+    padding: 15px;
+}
+.col2 div.one h2,.col2 div.three h2,.col2 div.four h2
+{
+    font-size: 20px;
+    color: #072;
+    margin: 0px 0px 6px;
+}
+.col2 div.one span.tenxun,.col2 div.three span
+,.col2 div.four div.contain div.con span,.col2 div.four div span,
+.col2 div.five span2
+{
+    color: #37a;
+    font-size: 13px;
+}
+.col2 div.one span.tenxun:hover,.col2 div.three span:hover
+,.col2 div.four div.contain div.con span:hover,.col2 div.four div span:hover,
+.col2 div.five span2:hover
+{
+    background-color: #37a;
+    cursor: pointer;
+    color:white;
+}
+.col2 div.one span.vip
+{
+    margin-left: 60px;
+    color: #999;
+    font-size:13px;
+}
+.col2 div.one hr,.col2 div.three hr,.col2 div.four hr
+{
+    color: #c7c5c5;
+    border-style: dashed;
+}
+.col2 div.two,.col2 div.three,.col2 div.four,.col2 div.five
+{
+    padding-left: 10px;
+    margin-top: 30px;
+}
+.col2 div.two div
+{
+    width: 150px;
+    margin: 3px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.col2 div.two div:hover 
+{
+    transform: scale(1.1);
+}
+.col2 div.two div img
+{
+    transition: transform 0.3s ease-in-out;
+}
+.col2 div.two div span
+{
+    font-size: 13px;
+    margin-left: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+.col2 div.two div:hover img
+{
+    border: 1px solid red;
+}
+.col2 div.two div:hover span
+{
+    color: red;
+}
+.col2 div.three 
+{
+    padding: 15px;
+    background-color: #Eaf1de;
+}
+.col2 div.three span2
+{
+    float: right;
+    color: #666;
+    font-size: 13pxß;
+}
+.col2 div.four 
+{
+    padding: 15px;
+    background-color: #Eaf1de;
+}
+.col2 div.four img
+{
+    display: inline-block;
+    border-radius: 50px;
+}
+.col2 div.four div
+{
+    vertical-align: top;
+    display: inline-block;
+}
+.col2 div.four div.con
+{
+    margin-left: 25px;
+}
+.col2 div.four div.contain div.con span
+{
+    font-size: 15px;
+}
+.col2 div.four div.contain div.con span2
+{
+    font-size: 15px;
+    color: #666;
+}
+.col2 div.four div.con span.rating span.star
+{
+    color:#F90;
+}
+.col2 div.five img
+{
+    display: inline-block;
+}
+.col2 div.five div 
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+footer {
+    background-color:rgb(0,0,0,0.65);
+    color: rgb(101, 172, 214);
+    padding: 10px;
+    text-align: center;
+}

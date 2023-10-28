@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>完美世界</title>
+</head>
+<body>
+  <div class="nav">
+    <div class="first">
+      <ul>
+        <li><a href="#">豆瓣</a></li>
+        <li><a href="#">读书</a></li>
+        <li><a href="#">电影</a></li>
+        <li><a href="#">音乐</a></li>
+        <li><a href="#">同城</a></li>
+        <li><a href="#">小组</a></li>
+        <li><a href="#">阅读</a></li>
+        <li><a href="#">FM</a></li>
+        <li><a href="#">时间</a></li>
+        <li><a href="#">豆品</a></li>
+      </ul>
+    </div>
+
+    <div class="second">
+      <ul>
+        <li><a href="#">下载豆瓣客户端</a></li>
+        <li><a href="#">登录 / 注册</a></li>
+      </ul>   
+    </div>
+  </div>
+
+  <div class="header">
+
+    <div class="row1">
+
+      <div class="img">
+        <img src="./image/logo.png" width="200px">
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="搜索电影、电视剧、综艺、影人">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+    <hr>
+      <div class="row2">
+        <ul>
+          <li><a href="#">影讯&购票</a></li>
+          <li><a href="#">选电影</a></li>
+          <li><a href="#">电视剧</a></li>
+          <li><a href="#">排行榜</a></li>
+          <li><a href="#">影评</a></li>
+          <li><a href="#">2022年度榜单</a></li>
+          <li><a href="#">2022书影音报告</a></li>
+          
+        </ul>
+
+      </div>
+
+    </div>
+    
+  </div>
+  <div class="all">
+      <div class="col1">
+          <span>
+                实验1中页面整体采用div和css布局,通过设置display:inline-block使得div能在一行里出现
+                一些基础布局方式和基础样式这里不叙述,本文介绍一些特点内容。
+          </span>
+          <hr>
+          <span>
+            第一点,页面整体居中,且有阴影效果,整体看起来更加美观有层次.
+            代码如下
+          </span>
+          <textarea cols="70" rows="10">
+            .all
+                {
+                margin: 0 auto;
+                width: 700px;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+          </textarea>
+          <hr>
+          <span>
+            第二点,当鼠标悬停在页面中的图片和一些文字时,图片会出现阴影效果,从而突出图片,
+            展示的效果更好。通过将一组图片和文字放置于同一个div中,然后对这个div进行样式的
+            设计。以演职员下的列表图片为例展示代码。
+          </span>
+          <textarea cols="70" rows="10">
+              <div>
+                <img src="./image/袁洁.png" width="130px">
+                <h5>
+                    袁洁<br>
+                    <span>导演</span>
+                </h5>
+              </div>
+              .actor div.image div
+              {
+                  width: 130px;
+                  display: inline-block;
+                  margin-left: 15px;
+                  vertical-align:middle;
+              }
+              .actor div.image div:hover
+              {
+                  transition: box-shadow 0.3s ease;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+              }
+          </textarea>
+          <hr>
+          <span>
+            第三,页面效果中包括颜色变化、阴影效果都通过transition属性实现
+            平滑的过度效果,观赏性更佳.以页面中橘黄色的button按钮为例,展示代码
+          </span>
+
+          <textarea cols="70" rows="10">
+            <button class="my-button">想看</button>
+            <button class="my-button">在看</button>
+            <button class="my-button">看过</button>
+            .evaluate button,.xuanji button
+            {
+                display: inline-block;
+                margin-right: 15px;
+                padding: 10px 20px;
+                font-size: 16px;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                outline: none;
+                border:1px solid orange;
+                color:black;
+                background-color:rgb(255, 165,0,0.3);
+                border-radius: 5px;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            .evaluate button
+            {
+
+                font-size: 10px;
+            }
+
+            .evaluate button:hover {
+                transition: background-color 0.5s ease;
+                background-color:rgb(255,165,0,0.8);
+            }
+          </textarea>
+          <hr>
+          <span>
+            第四,页面中的五角星图标,通过`&#9733`实体实现,有些星星一直呈黄色,有些星星
+            一开始呈暗色,鼠标悬停的时候呈黄色,实现评分效果交互.
+          </span>
+          <textarea cols="70" rows="10">
+            <span class="rating">
+              <strong>评价:</strong>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star5">&#9733;</span>
+            </span>
+            .star{
+              cursor: pointer;
+              color: #f90;
+            }
+            .star5,.star4
+            {
+                cursor: pointer;
+                color:#666;   
+            }
+            
+            .star5:hover,.star4:hover,.star4:active
+            .star5:active {
+                transition: color 0.3s ease;
+                color: #f90; 
+            }
+          </textarea>
+          <hr>
+          <span>
+            第五,页面中增加小图标,和功能相对应,交互性和趣味性更好.
+          </span>
+          <img src="./image/img1.png" width="95%">
+          <br>
+          <textarea cols="70" rows="10">
+            <div class="comment">
+              <span> 
+                  <span class="ppp">写短评</span>
+                  <img src="./image/short-comment.gif">
+              </span>
+              <span>
+                  <span class="ppp">写影评</span>
+                  <img src="./image/add-review.gif">
+                  
+              </span>
+              <span>
+                  <span class="ppp">分享到</span>
+                  <img src="./image/截屏2023-10-12 08.45.20.png" width="14px">
+              </span>
+            </div>
+            .comment
+            {
+                margin-top: 20px;
+                padding-bottom: 10px;
+                display: inline-block;
+                width:220px;
+                vertical-align:bottom;
+
+            }
+          </textarea>
+          <hr>
+          <span>
+            第六,评论框可以实现折叠效果.
+          </span>
+          <img src="./image/img2.png" width="95%">
+          <br>
+          <img src="./image/img3.png" width="95%">
+          <hr>
+          <textarea cols="70" rows="10">
+            <div class="comments-container">
+              <details open>
+                <summary>点击发表评论</summary>
+                <form id="comment-form">
+                  <textarea id="comment-text" placeholder="在这里输入你的评论">
+                  <br>
+                  <button type="submit">发表评论</button>
+                </form>
+              </details>
+            </div>
+            .comments-container {
+              max-width: 600px;
+              margin: 0 auto;
+              }
+              
+              details {
+                  margin-bottom: 20px;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+                  padding: 10px;
+              }
+              
+              summary {
+                  cursor: pointer;
+              }
+              
+              #comment-form textarea {
+                  width: 80%;
+                  padding: 10px;
+                  margin-top: 10px;
+              }
+              
+              #comment-form button {
+                  padding: 10px;
+                  background-color: #79c8f5;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+              }
+          </textarea>
+      </div>
+      <div class="col2">
+          <div class="one">
+            <h2>
+              在哪看这部剧集 ······
+            </h2>
+            <span class="tenxun">
+              腾讯视频
+            </span>
+            <span class="vip">
+              VIP 免费看
+            </span>
+            <hr>
+            <span class="tenxun">
+              爱奇艺视频
+            </span>
+          </div>
+
+          <div class="two">
+            <div>
+              <img src="./image/pto1.jpeg" width="100%">
+              <span>使命召唤14</span>
+            </div>
+            <div>
+              <img src="./image/pto2.jpeg" width="100%">
+              <span>使命召唤14</span>
+            </div>
+            <br>
+            <div>
+              <img src="./image/pto3.jpeg" width="100%">
+              <span>使命召唤14</span>
+            </div>
+            <div>
+              <img src="./image/pto4.jpeg" width="100%">
+              <span>使命召唤14</span>
+            </div>
+          </div>
+          <div class="three">
+            <h2>
+              以下片单推荐 ······
+            </h2>
+            <hr>
+            <span>
+              中国优秀动画 (豆瓣评分>8.0)
+            </span>
+            <span2>
+              ([已注销])
+            </span2>
+            <hr>
+            <span>
+              国漫崛起 (七分至七分以上)
+            </span>
+            <span2>
+              (影中世界)
+            </span2>
+            <hr>
+            <span>
+              3d国漫大全 【1000部精品】
+            </span>
+            <span2>
+              (少年歌行)
+            </span2>
+            <hr>
+            <span>
+              五星国漫～
+            </span>
+            <span2>
+              (矹矶)
+            </span2>
+            <hr>
+            <span>
+              2000年后中国动漫
+            </span>
+            <span2>
+              (掌灯者)
+            </span2>
+          </div>
+
+          <div class="four">
+            <h2>
+              谁在看这部剧集······
+            </h2>
+            <br>
+            <div class="contain">
+              <div>
+                <img src="./image/person1.jpeg" width="50px">
+              </div>
+              <div class="con">
+                <span>
+                  梦想
+                </span>
+                <br>
+                <span2>
+                  一小时前 看过
+                </span2>
+                <span class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+              </span>
+              </div>
+            </div>
+            <hr>
+            <div class="contain">
+              <div>
+                <img src="./image/person2.jpeg" width="50px">
+              </div>
+              <div class="con">
+                <span>
+                  Wonder Women
+                </span>
+                <br>
+                <span2>
+                  三小时前 看过
+                </span2>
+                <span class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+              </span>
+              </div>
+            </div>
+            <hr>
+            <div class="contain">
+              <div>
+                <img src="./image/person3.jpeg" width="50px">
+              </div>
+              <div class="con">
+                <span>
+                  世一皮宝宝
+                </span>
+                <br>
+                <span2>
+                  两小时前 看过
+                </span2>
+                <span class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+                  <span class="star1">&#9733;</span>
+              </span>
+              </div>
+            </div>
+            <hr>
+            <div>
+              <span>
+                3233人在看 / 11044人看过 / 3963人想看
+              </span>
+            </div>
+            
+          </div>
+
+          <div class="five">
+            <span>
+              订阅完美世界的影评：
+            </span>
+            <div>
+              <img src="./image/logo1.png" width="30px">
+              <span2>freed:rss 2.0</span2>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+
+  <footer>
+    <p>&copy; 2023 豆瓣影视 && Mr.Psy666</p>
+  </footer>
+</body>
+</html>
